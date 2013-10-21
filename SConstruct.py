@@ -1,13 +1,12 @@
 """The SCons file."""
 
-import os
-
 # Build libraries.
-env = Environment()
-libs = (
-    ('src/Averager.cpp', env),
+sources = (
+    'src/Averager.cpp',
+    'src/Config.cpp',
 )
-for source, env in libs:
+env = Environment()
+for source in sources:
     target = source[:source.rfind('.')]
     env.Library(target=target, source=source)
 
@@ -16,9 +15,9 @@ env = Environment(
     LIBPATH='src',
     LIBS=['boost_unit_test_framework', 'Averager',],
 )
-progs = (
-    ('src/AveragerTest.cpp', env),
+sources = (
+    'src/AveragerTest.cpp',
 )
-for source, env in progs:
+for source in sources:
     target = source[:source.rfind('.')]
     env.Program(target=target, source=source)
