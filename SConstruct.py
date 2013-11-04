@@ -13,10 +13,11 @@ for source in sources:
 # Build programs.
 env = Environment(
     LIBPATH='src',
-    LIBS=['boost_unit_test_framework', 'Averager',],
+    LIBS=['boost_unit_test_framework', 'Averager', 'Config'],
 )
 sources = (
     'src/AveragerTest.cpp',
+    'src/ConfigTest.cpp',
 )
 for source in sources:
     target = source[:source.rfind('.')]
