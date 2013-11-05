@@ -60,10 +60,6 @@ string& Config::operator[](const string& key){
     return m_data[key];
 }
 
-const string& Config::operator[](const string& key) const{
-    //return m_data[key];
-}
-
 ostream& operator<<(ostream& out, const Config& config){
     for(Config::DataType::const_iterator ii=config.m_data.begin(); 
         ii!=config.m_data.end(); ++ii)
