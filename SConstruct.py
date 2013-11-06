@@ -4,21 +4,24 @@
 sources = (
     'src/Averager.cpp',
     'src/Config.cpp',
+    'src/SortedList.cpp',
 )
 env = Environment()
 for source in sources:
     target = source[:source.rfind('.')]
     env.Library(target=target, source=source)
 
-# Build programs.
-env = Environment(
-    LIBPATH='src',
-    LIBS=['boost_unit_test_framework', 'Averager', 'Config'],
+# Build test programs.
+sources_libs = (
+    # Each source code links to the library.
+    ('src/AveragerTest.cpp', 'Averager'),
+    ('src/ConfigTest.cpp', 'Config'),
+    ('src/SortedListTest.cpp', 'SortedList'),
 )
-sources = (
-    'src/AveragerTest.cpp',
-    'src/ConfigTest.cpp',
-)
-for source in sources:
+for source, lib in sources_libs:
+    env = Environment(
+        LIBPATH='src',
+        LIBS=['boost_unit_test_framework', lib],
+    )
     target = source[:source.rfind('.')]
     env.Program(target=target, source=source)
