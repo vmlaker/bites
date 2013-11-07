@@ -15,7 +15,6 @@ public:
     vector<float> tick();
 private:
     vector<float> m_periods;
-    //SortedList<float> m_history;
     SortedList<boost::posix_time::ptime> m_history;
 };
 

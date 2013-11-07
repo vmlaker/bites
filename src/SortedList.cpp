@@ -1,9 +1,9 @@
 // Sorted list.
 
-#include "SortedList.hpp"
 #include <algorithm>
 #include <iterator>
 using namespace std;
+#include "SortedList.hpp"
 
 // Initialize the object with a copy of the donor list, sorted.
 template<typename T>
@@ -15,7 +15,8 @@ SortedList<T>::SortedList(const list<T>& donor)
 
 // Add item to the list while maintaining sorted order.
 template<typename T>
-void SortedList<T>::add(const T& item){
+void SortedList<T>::add(const T& item)
+{
     m_data.push_back(item);
     m_data.sort();
 }
@@ -24,8 +25,7 @@ void SortedList<T>::add(const T& item){
 template<typename T>
 unsigned int SortedList<T>::getCountLT(const T& item) const
 {
-    typename list<T>::const_iterator lower = 
-        lower_bound(m_data.begin(), m_data.end(), item);
+    auto lower = lower_bound(m_data.begin(), m_data.end(), item);
     return distance(m_data.begin(), lower);
 }
 
@@ -33,8 +33,7 @@ unsigned int SortedList<T>::getCountLT(const T& item) const
 template<typename T>
 unsigned int SortedList<T>::getCountGT(const T& item) const
 {
-    typename list<T>::const_iterator upper = 
-        lower_bound(m_data.begin(), m_data.end(), item);
+    auto upper = lower_bound(m_data.begin(), m_data.end(), item);
     return distance(++upper, m_data.end());
 }
 
@@ -42,8 +41,7 @@ unsigned int SortedList<T>::getCountGT(const T& item) const
 template<typename T>
 unsigned int SortedList<T>::removeLT(const T& item)
 {
-    typename list<T>::iterator lower = 
-        lower_bound(m_data.begin(), m_data.end(), item);
+    auto lower = lower_bound(m_data.begin(), m_data.end(), item);
     unsigned int count = distance(m_data.begin(), lower);
     m_data.erase(m_data.begin(), lower);
     return count;

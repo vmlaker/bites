@@ -1,2 +1,2 @@
-#define BOOST_TEST_MODULE "C++ Unit Tests for MyTangledLibrary"
+#define BOOST_TEST_MODULE "C++ Unit Tests for Bites codes."
 #include <boost/test/included/unit_test.hpp>

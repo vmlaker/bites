@@ -2,8 +2,6 @@
 
 #include "Averager.hpp"
 
-using namespace std;
-
 // The constructor.
 Averager::Averager(const int& max_count) 
     : max_count(max_count > 1 ? max_count : 1),  // Minimum is 1.
@@ -12,8 +10,8 @@ Averager::Averager(const int& max_count)
 
 
 // Add a value, and return current average.
-float Averager::add(const float& value){
-
+float Averager::add(const float& value)
+{
     // Add new value.
     this->data.push_front(value);
     if(this->data.size() > this->max_count){
@@ -22,7 +20,7 @@ float Averager::add(const float& value){
 
     // Compute the average.
     float total;
-    for(deque<float>::iterator ii = this->data.begin(); ii < this->data.end(); ++ii){
+    for(auto ii = this->data.begin(); ii < this->data.end(); ++ii){
         total += *ii;
     }
     float result = total/this->data.size();
@@ -30,6 +28,7 @@ float Averager::add(const float& value){
 }
 
 // Return number of samples.
-int Averager::length(){
+int Averager::length()
+{
     return this->data.size();
 }
