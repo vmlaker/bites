@@ -21,6 +21,11 @@ Build the codes by running SCons:
    
    scons
 
+Run the tests:
+::
+
+   src/test --report_level=detailed
+
 Clean up after the build:
 ::
 

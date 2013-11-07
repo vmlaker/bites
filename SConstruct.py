@@ -8,25 +8,31 @@ sources = (
     'src/RateTicker.cpp',
 )
 env = Environment(
-    CXXFLAGS="-std=c++11",
+    CXXFLAGS='-std=c++11',
 )
 for source in sources:
     target = source[:source.rfind('.')]
     env.Library(target=target, source=source)
 
-# Build test programs.
-sources_libs = (
-    # Each source code links to libraries.
-    ('src/AveragerTest.cpp'  , ['Averager']),
-    ('src/ConfigTest.cpp'    , ['Config']),
-    ('src/SortedListTest.cpp', ['SortedList']),
-    ('src/RateTickerTest.cpp', ['RateTicker', 'SortedList']),
+# Build the test program.
+sources = (
+    'src/AveragerTest.cpp',
+    'src/ConfigTest.cpp',
+    'src/SortedListTest.cpp',
+    'src/RateTickerTest.cpp',
+    'src/test.cpp',
 )
-for source, lib in sources_libs:
-    env = Environment(
-        LIBPATH='src',
-        LIBS=['boost_unit_test_framework'] + lib,
-        CXXFLAGS="-std=c++11",
-    )
-    target = source[:source.rfind('.')]
-    env.Program(target=target, source=source)
+libs = (
+    'boost_unit_test_framework',
+    'Averager',
+    'Config',
+    'SortedList',
+    'RateTicker',
+)
+env = Environment(
+    LIBPATH='src',
+    LIBS=libs,
+    CXXFLAGS='-std=c++11',
+) 
+env.Program(target='src/test', source=sources)
+

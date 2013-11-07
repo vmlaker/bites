@@ -1,9 +1,9 @@
 // Test of Config class.
 
-#include "Config.hpp"
-#define BOOST_TEST_MAIN
-#define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
+#include "Config.hpp"
+
+BOOST_AUTO_TEST_SUITE(Config_Test)
 
 // Start from empty, set and get.
 BOOST_AUTO_TEST_CASE(test1)
@@ -46,3 +46,5 @@ BOOST_AUTO_TEST_CASE(test4)
     BOOST_CHECK_EQUAL(cc3["TOON"], "Bugs Bunny");
     BOOST_CHECK_EQUAL(cc3["QUOTE"], "The quick brown fox jumped over the lazy dog.");
 }
+
+BOOST_AUTO_TEST_SUITE_END()

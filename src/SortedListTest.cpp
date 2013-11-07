@@ -1,10 +1,9 @@
 // Test of SortedList class.
 
-#define BOOST_TEST_MAIN
-#define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
-
 #include "SortedList.hpp"
+
+BOOST_AUTO_TEST_SUITE(SortedList_Test)
 
 // Start from empty.
 BOOST_AUTO_TEST_CASE(test1)
@@ -32,3 +31,5 @@ BOOST_AUTO_TEST_CASE(test2)
     BOOST_CHECK_EQUAL(aa.removeLT(5), 5);
     BOOST_CHECK_EQUAL(aa.getCountLT(5), 0);
 }
+
+BOOST_AUTO_TEST_SUITE_END()
