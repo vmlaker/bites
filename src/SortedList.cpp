@@ -51,3 +51,6 @@ unsigned int SortedList<T>::removeLT(const T& item)
 
 // Instantiate templates.
 template class SortedList<int>;
+template class SortedList<float>;
+#include <boost/date_time.hpp>
+template class SortedList<boost::posix_time::ptime>;
