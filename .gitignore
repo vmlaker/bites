@@ -1,2 +1,5 @@
 .sconsign.dblite
-src/*.o
+*.o
+*.out
+lib
+run_tests

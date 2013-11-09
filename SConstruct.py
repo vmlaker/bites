@@ -1,38 +1,32 @@
 """The SCons file for Bites."""
 
-# Build libraries.
-sources = (
-    'src/Averager.cpp',
-    'src/Config.cpp',
-    'src/SortedList.cpp',
-    'src/RateTicker.cpp',
-)
-env = Environment(
-    CXXFLAGS='-std=c++11',
-)
-for source in sources:
-    target = source[:source.rfind('.')]
-    env.Library(target=target, source=source)
+import os
 
-# Build the test program.
-sources = (
-    'src/AveragerTest.cpp',
-    'src/ConfigTest.cpp',
-    'src/SortedListTest.cpp',
-    'src/RateTickerTest.cpp',
-    'src/test.cpp',
-)
-libs = (
-    'boost_unit_test_framework',
+names = [
     'Averager',
     'Config',
     'SortedList',
     'RateTicker',
-)
+]
+
+# Build the libraries.
 env = Environment(
-    LIBPATH='src',
+    CPPPATH='include',
+    CXXFLAGS='-std=c++11',
+)
+for name in names:
+    target = os.path.join('lib', name)
+    source = os.path.join('src', '{}.cpp'.format(name))
+    env.Library(target=target, source=source)
+
+# Build the test program.
+libs = names + ['boost_unit_test_framework']
+sources = ['test.cpp'] + ['{}Test.cpp'.format(name) for name in names]
+sources = [os.path.join('test', source) for source in sources]
+env = Environment(
+    CPPPATH='include',
+    LIBPATH='lib',
     LIBS=libs,
     CXXFLAGS='-std=c++11',
 ) 
-env.Program(target='src/test', source=sources)
-
+env.Program(target='run_tests', source=sources)

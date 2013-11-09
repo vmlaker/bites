@@ -19,12 +19,13 @@ Usage
 Build the codes by running SCons:
 ::
    
-   scons
+   scons -j8
 
 Run the tests:
 ::
 
-   src/test --report_level=detailed
+   ./run_tests --report_level=short
+   ./run_tests --report_level=detailed
 
 Clean up after the build:
 ::
