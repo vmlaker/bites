@@ -2,12 +2,11 @@
 
 #include <algorithm>
 #include <iterator>
-using namespace std;
 #include "SortedList.hpp"
 
 // Initialize the object with a copy of the donor list, sorted.
 template<typename T>
-SortedList<T>::SortedList(const list<T>& donor)
+SortedList<T>::SortedList(const std::list<T>& donor)
     : m_data(donor)
 {
     m_data.sort();

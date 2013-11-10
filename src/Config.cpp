@@ -3,14 +3,10 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-using namespace std;
-
 #include <boost/algorithm/string.hpp>
-using namespace boost::algorithm;
-
 #include "Config.hpp"
 
-Config::Config(const string& fname)
+Config::Config(const std::string& fname)
     : m_data()
 {
     if(!fname.empty()){
@@ -18,15 +14,17 @@ Config::Config(const string& fname)
     }
 }
 
-void Config::load(const string& fname)
+void Config::load(const std::string& fname)
 {
     // Iterate through lines in the file.
-    ifstream infile(fname.c_str());
-    int count = 0;
-    string line;
+    std::ifstream infile(fname.c_str());
+    std::string line;
+    int count = 0;  // Keep a running count of lines.
     while(getline(infile, line)){
         count += 1;
-        trim(line);
+        boost::algorithm::trim(line);
+
+        // Skip empty lines and comment lines.
         if(line.empty()){
             continue;
         }
@@ -35,36 +33,39 @@ void Config::load(const string& fname)
         }
 
         // Extract the key/value pair.
-        istringstream iss(line);        
-        string key;
+        std::istringstream iss(line);        
+        std::string key;
         iss >> key;
-        string value;
+        std::string value;
         getline(iss, value);
-        trim(value);
+        boost::algorithm::trim(value);
 
         if(value.empty()){
-            cout << "Error line " << count << " file " << fname << endl;
+            std::cout << "Error line " << count;
+            std::cout << " file " << fname << std::endl;
             continue;
         }
-        m_data[key] = value;
+        m_data[key] = value;  // Add to internal container.
     }
     infile.close();
 }
 
-void Config::save(const string& fname) const
+void Config::save(const std::string& fname) const
 {
-    ofstream outfile(fname.c_str());
+    std::ofstream outfile(fname.c_str());
     outfile << *this;
+    outfile.close();
 }
 
-string& Config::operator[](const string& key){
+std::string& Config::operator[](const std::string& key)
+{
     return m_data[key];
 }
 
-ostream& operator<<(ostream& out, const Config& config)
+std::ostream& operator<<(std::ostream& out, const Config& config)
 {
     for(auto ii=config.m_data.begin(); ii!=config.m_data.end(); ++ii)
     {
-        out << ii->first << " " << ii->second << endl;
+        out << ii->first << " " << ii->second << std::endl;
     }
 }

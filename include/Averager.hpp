@@ -4,7 +4,6 @@
 #define __AVERAGER_HPP__
 
 #include <deque>
-using namespace std;
 
 class Averager{
 public:
@@ -20,7 +19,7 @@ public:
 
 private:
     const int max_count;
-    deque<float> data;
+    std::deque<float> data;
 };
 
 #endif //__AVERAGER_HPP__

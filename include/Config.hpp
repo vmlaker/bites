@@ -5,18 +5,17 @@
 
 #include <string>
 #include <map>
-using namespace std;
 
 class Config
 {
 public:
-    Config(const string& fname="");
-    void load(const string& fname);
-    void save(const string& fname) const;
-    string& operator[](const string& key);
-    friend ostream& operator<<(ostream& out, const Config& config);
+    Config(const std::string& fname="");
+    void load(const std::string& fname);
+    void save(const std::string& fname) const;
+    std::string& operator[](const std::string& key);
+    friend std::ostream& operator<<(std::ostream& out, const Config& config);
 
-    typedef map<string, string> DataType;
+    typedef std::map<std::string, std::string> DataType;
 
 private:
     DataType m_data;

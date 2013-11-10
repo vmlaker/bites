@@ -6,7 +6,7 @@
 // Initialize the object with a vector of time periods in seconds.
 // For example, use (60, 300, 900) to track rates at 1, 5 and 15 minute
 // periods (like when reporting system load.)
-RateTicker::RateTicker(const vector<float>& periods)
+RateTicker::RateTicker(const std::vector<float>& periods)
     : m_periods(periods),
       m_history()
 {
@@ -17,14 +17,14 @@ RateTicker::RateTicker(const vector<float>& periods)
 // Return a vector of values corresponding to periods given in initializer, 
 // each value representing the rate of ticks (number of ticks per second)
 // during that period.
-vector<float> RateTicker::tick()
+std::vector<float> RateTicker::tick()
 {
     auto now = boost::posix_time::microsec_clock::universal_time();
     m_history.add(now);
 
     // Compute timestamps, one for each period,
     // representing the beginning of that period (i.e. since now.)
-    vector<boost::posix_time::ptime> tstamps (m_periods.size());
+    std::vector<boost::posix_time::ptime> tstamps (m_periods.size());
     for(int ii=0; ii<tstamps.size(); ++ii){
         auto period = m_periods[ii];
         auto duration = boost::posix_time::seconds(period);
@@ -37,14 +37,14 @@ vector<float> RateTicker::tick()
 
     // Create a list of counts, one for each period and
     // representing the number of ticks in that period.
-    vector <unsigned int> counts (m_periods.size());
+    std::vector <unsigned int> counts (m_periods.size());
     for(int ii=0; ii<counts.size(); ++ii){
         auto tstamp = tstamps[ii];
         counts[ii] = m_history.getCountGT(tstamp) + 1;
     }
 
     // Compute a list of rates for the periods.
-    vector <float> rates (m_periods.size());
+    std::vector <float> rates (m_periods.size());
     for(int ii=0; ii<counts.size(); ++ii){
         rates[ii] = counts[ii] / m_periods[ii];
     }

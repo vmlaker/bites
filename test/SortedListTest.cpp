@@ -21,7 +21,7 @@ BOOST_AUTO_TEST_CASE(test1)
 // Construct from list.
 BOOST_AUTO_TEST_CASE(test2)
 {
-    list<int> donor;
+    std::list<int> donor;
     for(int ii=0; ii<10; ++ii){
         donor.push_back(ii);
     }
