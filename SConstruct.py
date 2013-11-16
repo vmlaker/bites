@@ -2,7 +2,7 @@
 
 import os 
 
-# Names of classes.
+# Names of .cpp classes.
 names = [
     'Averager',
     'Config',
@@ -20,8 +20,17 @@ env = Environment(
 )
 env.Library(target=target, source=sources)
 
+# Add header-only classes.
+names += [
+    'ConcurrentQueue',
+]
+
 # Build the test program.
-libs = ['boost_unit_test_framework', 'bites']
+libs = [
+    'boost_unit_test_framework', 
+    'boost_thread', 
+    'bites',
+]
 sources = ['test.cpp'] + ['{}Test.cpp'.format(name) for name in names]
 sources = [os.path.join('test', source) for source in sources]
 env = Environment(
