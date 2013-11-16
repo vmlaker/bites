@@ -82,12 +82,14 @@ BOOST_AUTO_TEST_CASE(test3)
         std::thread* thread = producers.front();
         producers.pop();
         thread->join();
+        delete thread;
     }
 
     for(int ii=0; ii<CONSUMER_COUNT; ++ii){
         std::thread* thread = consumers.front();
         consumers.pop();
         thread->join();
+        delete thread;
     }
 
     BOOST_CHECK(true);
