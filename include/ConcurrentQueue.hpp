@@ -1,5 +1,5 @@
 // Concurrent Queue.
-// From original posting by Anthony Williams:
+// From original posting by Anthony Williams,
 // http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html
 
 
@@ -55,6 +55,12 @@ public:
         
         popped_value=the_queue.front();
         the_queue.pop();
+    }
+
+    typename std::queue<Data>::size_type size()
+    {
+        boost::mutex::scoped_lock lock(the_mutex);
+        return the_queue.size();
     }
 
 };

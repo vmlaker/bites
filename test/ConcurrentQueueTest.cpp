@@ -15,17 +15,22 @@ BOOST_AUTO_TEST_CASE(test1)
     char output;
     bool result;
 
+    BOOST_CHECK(cc.size() == 0);
     result = cc.try_pop(output);
     BOOST_CHECK(result == false);
     cc.push(input);
+    BOOST_CHECK(cc.size() == 1);
     result = cc.try_pop(output);
+    BOOST_CHECK(cc.size() == 0);
     BOOST_CHECK(result == true);
     BOOST_CHECK(output == input);
     result = cc.try_pop(output);
     BOOST_CHECK(result == false);
 
     cc.push(input);
+    BOOST_CHECK(cc.size() == 1);
     cc.wait_and_pop(output);
+    BOOST_CHECK(cc.size() == 0);
     BOOST_CHECK(output == input);
 }
 
@@ -55,7 +60,7 @@ BOOST_AUTO_TEST_CASE(test2)
     std::thread second (do_pop, &cc, COUNT);
     first.join();
     second.join();
-    BOOST_CHECK(true);
+    BOOST_CHECK(cc.size() == 0);
 }
 
 // Multi-producer, multi-consumer use of the queue.
@@ -92,7 +97,7 @@ BOOST_AUTO_TEST_CASE(test3)
         delete thread;
     }
 
-    BOOST_CHECK(true);
+    BOOST_CHECK(cc.size() == 0);
 }
 
 BOOST_AUTO_TEST_SUITE_END()
