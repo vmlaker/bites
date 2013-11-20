@@ -6,7 +6,6 @@ import os
 names = [
     'Averager',
     'Config',
-    'SortedList',
     'RateTicker',
 ]
 
@@ -23,6 +22,7 @@ env.Library(target=target, source=sources)
 # Add header-only classes.
 names += [
     'ConcurrentQueue',
+    'SortedList',
 ]
 
 # Build the test program.
