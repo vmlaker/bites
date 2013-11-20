@@ -39,4 +39,7 @@ env = Environment(
     LIBS=libs,
     CXXFLAGS='-std=c++11',
 ) 
-env.Program(target='run_tests', source=sources)
+env.Program(
+    target=os.path.join('bin', 'run_tests'), 
+    source=sources,
+)
