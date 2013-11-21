@@ -42,3 +42,11 @@ Clean up after the build:
 ::
 
    scons -c
+
+Docs
+----
+
+Generate the documentation:
+::
+
+   doxygen doxy.conf

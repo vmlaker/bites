@@ -3,3 +3,5 @@
 *.out
 lib
 bin
+html
+latex
