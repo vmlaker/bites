@@ -21,6 +21,15 @@ BOOST_AUTO_TEST_CASE(test2)
     Config cc("test/simple.cfg");
     BOOST_CHECK_EQUAL(cc["TOON"], "Bugs Bunny");
     BOOST_CHECK_EQUAL(cc["QUOTE"], "The quick brown fox jumped over the lazy dog.");
+    
+    auto width = cc["width"];  // Setting "width" is a string;
+    BOOST_CHECK_EQUAL(width, std::string("640"));
+
+    // Extract integer value from "1923 lbs (and change.)"
+    std::string item_weight(cc["item_weight"]);  // Copy the string.
+    int pounds;
+    std::stringstream(item_weight) >> pounds;
+    BOOST_CHECK_EQUAL(pounds, 1923);
 }
 
 // Read from file containing erroneous line, and get.
