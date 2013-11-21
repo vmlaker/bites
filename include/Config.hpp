@@ -64,6 +64,10 @@ public:
     //!  \param config the configuration whose contents are dumped.
     //!
     friend std::ostream& operator<<(std::ostream& out, const Config& config);
+    
+    //!  Return all keys (names of settings) present in the configuration.
+    //!  \returns a vector of strings.
+    std::vector<std::string> keys();
 
 private:
     //!  Keep data in a lookup container.

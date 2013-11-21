@@ -69,3 +69,13 @@ std::ostream& operator<<(std::ostream& out, const Config& config)
         out << ii->first << " " << ii->second << std::endl;
     }
 }
+
+std::vector<std::string> Config::keys()
+{
+    std::vector<std::string> result;
+    for(auto keyval: m_data)
+    {
+        result.push_back(keyval.first);
+    }
+    return result;
+}

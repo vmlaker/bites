@@ -1,5 +1,6 @@
 // Test of Config class.
 
+#include <set>
 #include <boost/test/unit_test.hpp>
 #include "Config.hpp"
 
@@ -11,6 +12,13 @@ BOOST_AUTO_TEST_CASE(test1)
     Config cc;
     cc["NAME"] = "Bender";
     cc["SURNAME"] = "Rodríguez";
+
+    std::set<std::string> known = { "NAME", "SURNAME" };
+    for(auto key : cc.keys())
+    {
+        BOOST_CHECK( known.find(key) != known.end() );
+    }
+
     BOOST_CHECK_EQUAL(cc["NAME"], "Bender");
     BOOST_CHECK_EQUAL(cc["SURNAME"], "Rodríguez");
 }
@@ -19,6 +27,14 @@ BOOST_AUTO_TEST_CASE(test1)
 BOOST_AUTO_TEST_CASE(test2)
 {
     Config cc("test/simple.cfg");
+
+    std::set<std::string> known = { 
+        "TOON", "QUOTE", "width", "height", "item_weight" };
+    for(auto key : cc.keys())
+    {
+        BOOST_CHECK( known.find(key) != known.end() );
+    }
+
     BOOST_CHECK_EQUAL(cc["TOON"], "Bugs Bunny");
     BOOST_CHECK_EQUAL(cc["QUOTE"], "The quick brown fox jumped over the lazy dog.");
     
