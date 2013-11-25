@@ -2,6 +2,9 @@
 
 import os 
 
+# Retrieve the debug flag, if set.
+debug = bool(int(ARGUMENTS.get('debug', False)))
+
 # Names of .cpp classes.
 names = [
     'Averager',
@@ -17,6 +20,7 @@ env = Environment(
     CPPPATH='include',
     CXXFLAGS='-std=c++11',
 )
+if debug: env.Append(CXXFLAGS = ' -g')
 env.Library(target=target, source=sources)
 
 # Add header-only classes.
@@ -39,6 +43,7 @@ env = Environment(
     LIBS=libs,
     CXXFLAGS='-std=c++11',
 ) 
+if debug: env.Append(CXXFLAGS = ' -g')
 env.Program(
     target=os.path.join('bin', 'run_tests'), 
     source=sources,
