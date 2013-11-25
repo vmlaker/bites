@@ -22,7 +22,7 @@ void Config::load(const std::string& fname)
     int count = 0;  // Keep a running count of lines.
     while(getline(infile, line)){
         count += 1;
-        boost::algorithm::trim(line);
+        boost::algorithm::trim_left(line);
 
         // Skip empty lines and comment lines.
         if(line.empty()){
@@ -31,6 +31,24 @@ void Config::load(const std::string& fname)
         if(line[0] == '#'){
             continue;
         }
+
+        // Process continuation on next line(s).
+        while(line.back() == '\\'){
+            std::string line2;
+            getline(infile, line2);
+
+            count += 1;
+            boost::algorithm::trim_left(line2);
+
+            // Skip empty comment lines.
+            if(line2[0] == '#'){
+                continue;
+            }
+            line.erase(line.length() - 1);
+            line += line2;
+        }
+        
+        boost::algorithm::trim_right(line);
 
         // Extract the key/value pair.
         std::istringstream iss(line);        
@@ -64,9 +82,14 @@ std::string& Config::operator[](const std::string& key)
 
 std::ostream& operator<<(std::ostream& out, const Config& config)
 {
-    for(auto ii=config.m_data.begin(); ii!=config.m_data.end(); ++ii)
+    int count = 0;
+    for(auto ii : config.m_data)
     {
-        out << ii->first << " " << ii->second << std::endl;
+        out << ii.first << " " << ii.second;
+        if(++count < config.m_data.size())
+        {
+            out << std::endl;
+        }
     }
 }
 

@@ -56,7 +56,7 @@ BOOST_AUTO_TEST_CASE(test3)
     BOOST_CHECK_EQUAL(cc["Genus"], "Python");
 }
 
-//Read from file, get, save, load via constructor and load().
+// Read from file, get, save, load via constructor and load().
 BOOST_AUTO_TEST_CASE(test4)
 {
     const char* fname1 = "test/simple.cfg";
@@ -70,6 +70,18 @@ BOOST_AUTO_TEST_CASE(test4)
     cc3.load(fname2);
     BOOST_CHECK_EQUAL(cc3["TOON"], "Bugs Bunny");
     BOOST_CHECK_EQUAL(cc3["QUOTE"], "The quick brown fox jumped over the lazy dog.");
+}
+
+// Multi-line settings.
+BOOST_AUTO_TEST_CASE(test5)
+{
+    Config cc("test/simple3.cfg");
+    BOOST_CHECK_EQUAL(cc["key2"], "val21");
+    BOOST_CHECK_EQUAL(cc["key3"], "val31");
+    BOOST_CHECK_EQUAL(cc["key4"], "val41 val42");
+    BOOST_CHECK_EQUAL(cc["key5"], "val51 val52");
+    BOOST_CHECK_EQUAL(cc["key6"], "val61 val62");
+    BOOST_CHECK_EQUAL(cc["key7"], "val71 val72");
 }
 
 BOOST_AUTO_TEST_SUITE_END()
