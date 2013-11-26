@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get -qq install libboost1.48-all-dev
   - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
   - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
-  - alias g++ "g++-4.8"
+  - alias g++="g++-4.8"
 # When Travis CI does the upgrade, replace above with below.
 #  - sudo apt-get install libboost-all-dev
 script:
