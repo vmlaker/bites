@@ -1,0 +1,11 @@
+# Travis CI configuration for Bites.
+
+language:
+  - cpp
+compiler:
+  - g++
+before_install:
+  - sudo apt-get install libboost-all-dev
+#  - sudo apt-get install scons
+script:
+  - scons
