@@ -42,15 +42,19 @@ Run the tests:
    bin/run_tests --report_level=short
    bin/run_tests --report_level=detailed
 
-Clean up after the build:
-::
-
-   scons -c
-
 Docs
 ----
 
 Generate the documentation:
 ::
 
+   scons logo_small.png
    doxygen doxy.conf
+
+Cleanup
+-------
+
+Restore your repo to a clean state:
+::
+
+   scons -c .

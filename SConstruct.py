@@ -21,7 +21,8 @@ env = Environment(
     CXXFLAGS='-std=c++11',
 )
 if debug: env.Append(CXXFLAGS = ' -g')
-env.Library(target=target, source=sources)
+lib = env.Library(target=target, source=sources)
+Default(lib)  # Library is part of the default build.
 
 # Add header-only classes.
 names += [
@@ -44,7 +45,16 @@ env = Environment(
     CXXFLAGS='-std=c++11',
 ) 
 if debug: env.Append(CXXFLAGS = ' -g')
-env.Program(
+tests = env.Program(
     target=os.path.join('bin', 'run_tests'), 
     source=sources,
 )
+Default(tests)  # Tests are part of the default build.
+
+# Custom builder for resizing the logo.
+conv = Builder(
+    action='convert $SOURCE -resize 75x75 $TARGET',
+)
+env = Environment(BUILDERS={'Resize' : conv})
+env.Resize('logo_small.png', 'logo.png')
+env.Clean('logo.png', 'logo_small.png')
