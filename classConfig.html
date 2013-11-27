@@ -21,10 +21,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Bites
    </div>
-   <div id="projectbrief">Bites is a C++ library.</div>
+   <div id="projectbrief">A small library of miscellaneous C++ codes.</div>
   </td>
  </tr>
  </tbody>
@@ -112,16 +113,16 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classConfig.html">Config</a> class implements a micro config settings utility, a loadable, saveable, one-line-per-entry config class. It just wraps a lookup table with a configuration file input/output, and a stream output.</p>
-<div class="fragment"><div class="line"><a class="code" href="classConfig.html">Config</a> config1(<span class="stringliteral">&quot;myapp.conf&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="classConfig.html">Config</a> config(<span class="stringliteral">&quot;myapp.conf&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// All configured values are strings.</span></div>
-<div class="line"><span class="keywordtype">string</span> name = config[<span class="stringliteral">&quot;nickname&quot;</span>];</div>
+<div class="line">std::string name = config[<span class="stringliteral">&quot;nickname&quot;</span>];</div>
 <div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;The name is &quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> width( config1[<span class="stringliteral">&quot;WIDTH&quot;</span>] );</div>
+<div class="line"><span class="keywordtype">int</span> width( config[<span class="stringliteral">&quot;WIDTH&quot;</span>] );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Dump the whole configuration to standard out.</span></div>
-<div class="line">std::cout &lt;&lt; config1 &lt;&lt; std::endl;</div>
+<div class="line">std::cout &lt;&lt; config &lt;&lt; std::endl;</div>
 </div><!-- fragment --><p>A configuration file <code>myapp.conf</code> may look like:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Set the window dimensions.</span></div>
 <div class="line"><span class="preprocessor"></span>WIDTH  1920</div>

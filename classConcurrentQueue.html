@@ -21,10 +21,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Bites
    </div>
-   <div id="projectbrief">Bites is a C++ library.</div>
+   <div id="projectbrief">A small library of miscellaneous C++ codes.</div>
   </td>
  </tr>
  </tbody>
@@ -88,25 +89,181 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ConcurrentQueue&lt; Data &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ConcurrentQueue_8hpp_source.html">ConcurrentQueue.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f81ae0712063e00540f8067c75776f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f81ae0712063e00540f8067c75776f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (Data const &amp;data)</td></tr>
+<tr class="memitem:a4f81ae0712063e00540f8067c75776f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a4f81ae0712063e00540f8067c75776f0">push</a> (Data const &amp;data)</td></tr>
 <tr class="separator:a4f81ae0712063e00540f8067c75776f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ad07b611fdfc18e85ddc88cdf0f7bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2ad07b611fdfc18e85ddc88cdf0f7bb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const </td></tr>
+<tr class="memitem:ae2ad07b611fdfc18e85ddc88cdf0f7bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#ae2ad07b611fdfc18e85ddc88cdf0f7bb">empty</a> () const </td></tr>
 <tr class="separator:ae2ad07b611fdfc18e85ddc88cdf0f7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2988ee8885dd78d725988d9a0bd92260"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2988ee8885dd78d725988d9a0bd92260"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>try_pop</b> (Data &amp;popped_value)</td></tr>
+<tr class="memitem:a2988ee8885dd78d725988d9a0bd92260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a2988ee8885dd78d725988d9a0bd92260">try_pop</a> (Data &amp;popped_value)</td></tr>
 <tr class="separator:a2988ee8885dd78d725988d9a0bd92260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d96b06e5dad3f222d9006caeeccb71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96d96b06e5dad3f222d9006caeeccb71"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wait_and_pop</b> (Data &amp;popped_value)</td></tr>
+<tr class="memitem:a96d96b06e5dad3f222d9006caeeccb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a96d96b06e5dad3f222d9006caeeccb71">wait_and_pop</a> (Data &amp;popped_value)</td></tr>
 <tr class="separator:a96d96b06e5dad3f222d9006caeeccb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf78d267471b4501d751bc90183b077"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf78d267471b4501d751bc90183b077"></a>
-std::queue&lt; Data &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="memitem:a8cf78d267471b4501d751bc90183b077"><td class="memItemLeft" align="right" valign="top">std::queue&lt; Data &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a8cf78d267471b4501d751bc90183b077">size</a> ()</td></tr>
 <tr class="separator:a8cf78d267471b4501d751bc90183b077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Data&gt;<br/>
+class ConcurrentQueue&lt; Data &gt;</h3>
+
+<p>The <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a> class is a thread-safe queue. Code is adapted from original posting by Anthony Williams at <a href="http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html">http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae2ad07b611fdfc18e85ddc88cdf0f7bb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test whether the queue is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>whether the queue is empty (i.e. whether its size is zero.) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f81ae0712063e00540f8067c75776f0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">Data const &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push data onto queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>data to be pushed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cf78d267471b4501d751bc90183b077"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;Data&gt;::size_type <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return size. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of elements in the queue. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2988ee8885dd78d725988d9a0bd92260"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::try_pop </td>
+          <td>(</td>
+          <td class="paramtype">Data &amp;&#160;</td>
+          <td class="paramname"><em>popped_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">popped_value</td><td>reference to popped value, if successful. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a value was popped, false otherwise (i.e. nothing in the queue.) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96d96b06e5dad3f222d9006caeeccb71"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::wait_and_pop </td>
+          <td>(</td>
+          <td class="paramtype">Data &amp;&#160;</td>
+          <td class="paramname"><em>popped_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pops value off the queue (waits until queue has value first.) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">popped_value</td><td>reference to popped value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="ConcurrentQueue_8hpp_source.html">ConcurrentQueue.hpp</a></li>
 </ul>
