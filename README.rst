@@ -1,11 +1,16 @@
-.. image:: https://api.travis-ci.org/vmlaker/bites.png?branch=master
-  :alt: Build Result Image
-  :target: https://travis-ci.org/vmlaker/bites
+.. image:: http://vmlaker.github.io/bites/logo_small.png
+  :alt: Bites Logo
+  :target: http://vmlaker.github.io/bites
+
+.. .. image:: https://api.travis-ci.org/vmlaker/bites.png?branch=master
+..  :alt: Build Result Image
+..  :target: https://travis-ci.org/vmlaker/bites
 
 Bites
 =====
 
 Bite-sized C++ codes, a C++ version of `Coils <http://vmlaker.github.com/coils>`_.
+API docs can be viewed `here <http://vmlaker.github.com/bites>`_.
 
 Requirements
 ------------

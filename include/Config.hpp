@@ -6,16 +6,16 @@
 
   \code
 
-    Config config1("myapp.conf");
+    Config config("myapp.conf");
 
     // All configured values are strings.
-    string name = config["nickname"];
+    std::string name = config["nickname"];
     std::cout << "The name is " << name << "." << std::endl;
 
-    int width( config1["WIDTH"] );
+    int width( config["WIDTH"] );
    
     // Dump the whole configuration to standard out.
-    std::cout << config1 << std::endl;
+    std::cout << config << std::endl;
 
    \endcode
                                                         
