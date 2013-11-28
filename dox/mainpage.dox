@@ -1,0 +1,60 @@
+/**
+
+\mainpage Bites documentation
+
+Bite-sized C++ codes, a C++ version of 
+<a href="http://vmlaker.github.com/coils">Coils</a>.
+
+Requirements
+------------
+
+The codes use 
+<a href="http://www.boost.org">Boost C++ libraries</a>
+for implementation and test harness.
+The build environment is configured with 
+<a href="http://www.scons.org">SCons</a>,
+the powerful Python-based software construction tool.
+
+If using YUM, get these with:
+
+\code
+   yum install boost-devel scons
+\endcode
+
+Or, with Aptitude, run:
+
+\code
+   aptitude install libboost-all-dev scons
+\endcode
+
+Usage
+-----
+Build the codes by running SCons:
+
+\code   
+   scons -j8
+\endcode
+
+Run the tests:
+
+\code
+   bin/run_tests --report_level=short
+   bin/run_tests --report_level=detailed
+\endcode
+
+Generate the documentation:
+
+\code
+   scons logo_small.png
+   doxygen dox/doxy.conf
+\endcode
+
+Cleanup
+-------
+Restore your repo to a clean state:
+
+\code
+   scons -c .
+\endcode
+
+*/
