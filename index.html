@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Bites: Bites documentation</title>
+<title>Bites: Getting started</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -14,6 +14,7 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -76,34 +77,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Bites documentation </div>  </div>
+<div class="title">Getting started </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Bite-sized C++ codes, a C++ version of <a href="http://vmlaker.github.com/coils">Coils</a>.</p>
-<h2>Requirements</h2>
-<p>The codes use <a href="http://www.boost.org">Boost C++ libraries</a> for implementation and test harness. The build environment is configured with <a href="http://www.scons.org">SCons</a>, the powerful Python-based software construction tool.</p>
-<p>If using YUM, get these with:</p>
+<div class="textblock"><p>Bites is a small library of standalone C++ codes <a href="http://www.github.com/vmlaker">the author</a> has found useful in other projects. It's written in <a href="http://www.stroustrup.com/C++11FAQ.html">C++11</a> and often relies on <a href="http://www.boost.org">Boost C++ libraries</a> for implementation details. The project is hosted on <a href="http://www.github.com/vmlaker/bites">GitHub</a>.</p>
+<h2>Installation</h2>
+<p>The build environment is configured with <a href="http://www.scons.org">SCons</a>, the powerful Python-based software construction tool. Some of the codes use Boost C++ libraries internally. All codes are developed in a test-driven philosophy using the <a href="http://www.boost.org/doc/libs/release/libs/test">Boost Test</a> library. These software requirements are freely available and best gotten using your distribution's package manager. If using YUM, get them with:</p>
 <div class="fragment"><div class="line">yum install boost-devel scons</div>
-</div><!-- fragment --><p>Or, with Aptitude, run:</p>
+</div><!-- fragment --><p>Or with Aptitude, ala:</p>
 <div class="fragment"><div class="line">aptitude install libboost-all-dev scons</div>
-</div><!-- fragment --><h2>Usage</h2>
-<p>Build the codes by running SCons:</p>
-<div class="fragment"><div class="line">scons -j8</div>
-</div><!-- fragment --><p>Run the tests:</p>
-<div class="fragment"><div class="line">bin/run_tests --report_level=<span class="keywordtype">short</span></div>
+</div><!-- fragment --><p>Now you're ready to download, build and test Bites on your system:</p>
+<div class="fragment"><div class="line">git clone http:<span class="comment">//github.com/vmlaker/bites</span></div>
+<div class="line">cd bites</div>
+<div class="line">scons -j8</div>
+<div class="line">bin/run_tests --report_level=<span class="keywordtype">short</span></div>
 <div class="line">bin/run_tests --report_level=detailed</div>
-</div><!-- fragment --><p>Generate the documentation:</p>
+</div><!-- fragment --><h2>Generating docs</h2>
+<p>Source code is annotated with comments written in <a href="http://www.doxygen.org">Doxygen</a>-style. If you'd like to generate your own docs (like the web pages you are now reading) try this:</p>
 <div class="fragment"><div class="line">scons logo_small.png</div>
 <div class="line">doxygen dox/doxy.conf</div>
-</div><!-- fragment --><h2>Cleanup</h2>
-<p>Restore your repo to a clean state:</p>
-<div class="fragment"><div class="line">scons -c .</div>
 </div><!-- fragment --> </div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 28 2013 11:13:58 for Bites by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+&copy; Copyright 2013 Velimir Mlaker.
+Generated on Fri Nov 29 2013 10:37:22 for Bites by
+<a href="http://www.doxygen.org/index.html">Doxygen</a>
+1.8.3.1
 </small></address>
 </body>
 </html>
