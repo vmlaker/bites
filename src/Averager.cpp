@@ -1,6 +1,8 @@
-// Averager.
+/*!
+  Averager class implementation.
+*/
 
-#include "Averager.hpp"
+#include "bites.hpp"
 
 namespace bites {
 

@@ -1,7 +1,7 @@
 // Test of SortedList class.
 
 #include <boost/test/unit_test.hpp>
-#include "SortedList.hpp"
+#include "bites.hpp"
 
 BOOST_AUTO_TEST_SUITE(SortedList_Test)
 

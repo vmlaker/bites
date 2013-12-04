@@ -3,7 +3,7 @@
 #include <queue>
 #include <thread>
 #include <boost/test/unit_test.hpp>
-#include "ConcurrentQueue.hpp"
+#include "bites.hpp"
 
 BOOST_AUTO_TEST_SUITE(ConcurrentQueue_Test)
 

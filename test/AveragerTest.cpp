@@ -1,7 +1,8 @@
-// Test of Averager class.
-
+/*!
+  Test of Averager class.
+*/
 #include <boost/test/unit_test.hpp>
-#include "Averager.hpp"
+#include "bites.hpp"
 
 BOOST_AUTO_TEST_SUITE(Averager_Test)
 

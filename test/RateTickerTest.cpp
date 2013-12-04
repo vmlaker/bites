@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <boost/test/unit_test.hpp>
-#include "RateTicker.hpp"
+#include "bites.hpp"
 
 BOOST_AUTO_TEST_SUITE(RateTicker_Test)
 

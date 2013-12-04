@@ -1,8 +1,9 @@
-// Test of Config class.
-
+/*!
+  Test of Config class.
+*/
 #include <set>
 #include <boost/test/unit_test.hpp>
-#include "Config.hpp"
+#include "bites.hpp"
 
 BOOST_AUTO_TEST_SUITE(Config_Test)
 
