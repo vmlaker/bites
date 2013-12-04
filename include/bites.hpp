@@ -6,5 +6,6 @@
 #include "ConcurrentQueue.hpp"
 #include "RateTicker.hpp"
 #include "SortedList.hpp"
+#include "Thread.hpp"
 
 #endif  //__BITES_HPP__

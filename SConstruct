@@ -28,6 +28,7 @@ Default(lib)  # Library is part of the default build.
 names += [
     'ConcurrentQueue',
     'SortedList',
+    'Thread',
 ]
 
 # Build the test program.
