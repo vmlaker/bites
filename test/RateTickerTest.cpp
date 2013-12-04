@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_SUITE(RateTicker_Test)
 BOOST_AUTO_TEST_CASE(test1)
 {
     std::vector<float> periods = { 1 };
-    RateTicker aa (periods);
+    bites::RateTicker aa (periods);
     BOOST_CHECK(aa.tick() == periods);
 }
 
@@ -18,7 +18,7 @@ BOOST_AUTO_TEST_CASE(test1)
 BOOST_AUTO_TEST_CASE(test2)
 {
     std::vector<float> periods = { 1, 2, 5 };
-    RateTicker aa (periods);
+    bites::RateTicker aa (periods);
     BOOST_CHECK( aa.tick() == std::vector<float>({ 1, 0.5, 0.2 }) );
 }
 

@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_SUITE(Averager_Test)
 
 BOOST_AUTO_TEST_CASE(my_test)
 {
-    Averager averager(2);
+    bites::Averager averager(2);
 
     BOOST_CHECK_EQUAL(averager.add(1.0), 1.0);
     BOOST_CHECK_EQUAL(averager.length(), 1);

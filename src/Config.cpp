@@ -6,6 +6,8 @@
 #include <boost/algorithm/string.hpp>
 #include "Config.hpp"
 
+namespace bites {
+
 Config::Config(const std::string& fname)
     : m_data()
 {
@@ -102,3 +104,5 @@ std::vector<std::string> Config::keys()
     }
     return result;
 }
+
+}  // namespace bites.

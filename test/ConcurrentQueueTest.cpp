@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_SUITE(ConcurrentQueue_Test)
 // Serial use of the queue.
 BOOST_AUTO_TEST_CASE(test1)
 {
-    ConcurrentQueue<char> cc;
+    bites::ConcurrentQueue<char> cc;
     char input;
     char output;
     bool result;
@@ -35,7 +35,7 @@ BOOST_AUTO_TEST_CASE(test1)
 }
 
 // Push on queue the given number of times.
-void do_push(ConcurrentQueue<int>* cc, int count)
+void do_push(bites::ConcurrentQueue<int>* cc, int count)
 {
     for(int ii=0; ii<count; ++ii){
         cc->push(ii);
@@ -43,7 +43,7 @@ void do_push(ConcurrentQueue<int>* cc, int count)
 }
 
 // Pop from queue the given number of times.
-void do_pop(ConcurrentQueue<int>* cc, int count)
+void do_pop(bites::ConcurrentQueue<int>* cc, int count)
 {
     for(int ii=0; ii<count; ++ii){
         int output;
@@ -54,7 +54,7 @@ void do_pop(ConcurrentQueue<int>* cc, int count)
 // Two-thread use of the queue.
 BOOST_AUTO_TEST_CASE(test2)
 {
-    ConcurrentQueue<int> cc;
+    bites::ConcurrentQueue<int> cc;
     const int COUNT = 1000;
     std::thread first (do_push, &cc, COUNT);
     std::thread second (do_pop, &cc, COUNT);
@@ -66,7 +66,7 @@ BOOST_AUTO_TEST_CASE(test2)
 // Multi-producer, multi-consumer use of the queue.
 BOOST_AUTO_TEST_CASE(test3)
 {
-    ConcurrentQueue<int> cc;
+    bites::ConcurrentQueue<int> cc;
     const int PRODUCER_COUNT = 32;
     const int CONSUMER_COUNT = 32;
     const int PUSH_COUNT = 128;

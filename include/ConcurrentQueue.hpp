@@ -1,11 +1,3 @@
-/*!
-  The ConcurrentQueue class is a thread-safe queue.
-  Code is adapted from original posting by Anthony Williams at
-  http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html
-
-
-*/
-
 #ifndef __CONCURRENTQUEUE_HPP__
 #define __CONCURRENTQUEUE_HPP__
 
@@ -13,6 +5,13 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/condition_variable.hpp>
 
+namespace bites {
+
+/*!
+  The ConcurrentQueue class is a thread-safe queue.
+  Code is adapted from original posting by Anthony Williams at
+  http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html
+*/
 template<typename Data>
 class ConcurrentQueue
 {
@@ -77,5 +76,7 @@ public:
     }
 
 };
+
+}  // namespace bites.
 
 #endif //__CONCURRENTQUEUE_HPP__

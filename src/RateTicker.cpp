@@ -3,6 +3,8 @@
 #include <boost/date_time.hpp>
 #include "RateTicker.hpp"
 
+namespace bites {
+
 // Initialize the object with a vector of time periods in seconds.
 // For example, use (60, 300, 900) to track rates at 1, 5 and 15 minute
 // periods (like when reporting system load.)
@@ -50,3 +52,5 @@ std::vector<float> RateTicker::tick()
     }
     return rates;
 }
+
+}  // namespace bites.

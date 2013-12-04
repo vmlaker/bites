@@ -2,6 +2,8 @@
 
 #include "Averager.hpp"
 
+namespace bites {
+
 // The constructor.
 Averager::Averager(const int& max_count) 
     : max_count(max_count > 1 ? max_count : 1),  // Minimum is 1.
@@ -32,3 +34,5 @@ int Averager::length()
 {
     return this->data.size();
 }
+
+}  // namespace bites.

@@ -1,3 +1,11 @@
+#ifndef __CONFIG_HPP__
+#define __CONFIG_HPP__
+
+#include <string>
+#include <map>
+
+namespace bites {
+
 /*!  
   The Config class implements a micro config settings utility,
   a loadable, saveable, one-line-per-entry config class.
@@ -33,13 +41,6 @@
 
   \endcode
 */
-
-#ifndef __CONFIG_HPP__
-#define __CONFIG_HPP__
-
-#include <string>
-#include <map>
-
 class Config
 {
 public:
@@ -74,5 +75,7 @@ private:
     typedef std::map<std::string, std::string> DataType;
     DataType m_data;
 };
+
+}  // namespace bites.
 
 #endif //__CONFIG_HPP__
