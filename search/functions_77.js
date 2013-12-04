@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wait_5fand_5fpop',['wait_and_pop',['../classConcurrentQueue.html#a96d96b06e5dad3f222d9006caeeccb71',1,'ConcurrentQueue']]]
+  ['wait_5fand_5fpop',['wait_and_pop',['../classbites_1_1ConcurrentQueue.html#a734dd1b6fdff6556bbff7de38d33cfee',1,'bites::ConcurrentQueue']]]
 ];

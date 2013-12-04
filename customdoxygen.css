@@ -105,13 +105,13 @@ div.navtab {
 /* @group Link Styling */
 
 a {
-	color: darkviolet;
+	color: firebrick;
 	font-weight: normal;
 	text-decoration: none;
 }
 
 .contents a:visited {
-	color: darkviolet;
+	color: firebrick;
 }
 
 a:hover {

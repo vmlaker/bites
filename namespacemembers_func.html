@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Bites: Member List</title>
+<title>Bites: Namespace Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -62,17 +63,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
+      <li class="current"><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
     </ul>
   </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespacemembers.html"><span>All</span></a></li>
+      <li class="current"><a href="namespacemembers_func.html"><span>Functions</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,27 +88,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
-<div class="header">
-  <div class="headertitle">
-<div class="title">Config Member List</div>  </div>
-</div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classConfig.html">Config</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classConfig.html#accf5e0bc060eff3ae9fcd684482edd39">Config</a>(const std::string &amp;fname=&quot;&quot;)</td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classConfig.html#a843df81617f6df4683235af7da1810d2">keys</a>()</td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConfig.html#a540f6d9cc38a52f378ab467cc6095df8">load</a>(const std::string &amp;fname)</td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classConfig.html#a34fbd40ddafcf6b7f064f9dee42b7389">operator&lt;&lt;</a>(std::ostream &amp;out, const Config &amp;config)</td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConfig.html#aa9bf3d7d03d0e8800547b701bf887686">operator[]</a>(const std::string &amp;key)</td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classConfig.html#ac04b4e93c71a4ab3d3a652a10a4e5ee3">save</a>(const std::string &amp;fname) const </td><td class="entry"><a class="el" href="classConfig.html">Config</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+&#160;<ul>
+<li>operator&lt;&lt;()
+: <a class="el" href="namespacebites.html#a106115e5c721d69429e9946e7f57d6a4">bites</a>
+</li>
+</ul>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 &copy; Copyright 2013 Velimir Mlaker.
-Generated on Fri Nov 29 2013 10:37:22 for Bites by
+Generated on Wed Dec 4 2013 12:51:15 for Bites by
 <a href="http://www.doxygen.org/index.html">Doxygen</a>
 1.8.3.1
 </small></address>

@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,23 +82,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1ConcurrentQueue.html">ConcurrentQueue</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">RateTicker Member List</div>  </div>
+<div class="title">bites::ConcurrentQueue&lt; Data &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classRateTicker.html">RateTicker</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>RateTicker</b>(const std::vector&lt; float &gt; &amp;periods) (defined in <a class="el" href="classRateTicker.html">RateTicker</a>)</td><td class="entry"><a class="el" href="classRateTicker.html">RateTicker</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>tick</b>() (defined in <a class="el" href="classRateTicker.html">RateTicker</a>)</td><td class="entry"><a class="el" href="classRateTicker.html">RateTicker</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html#a25bfccb688bf37ccbdeffa9b9641e149">empty</a>() const </td><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html#ac9f5a9718c172e64f62bb86d89191c11">push</a>(Data const &amp;data)</td><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html#a09cab5df70d45dc9b376aba2b7b7afaf">size</a>()</td><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html#af221d5499820894e9ef3d2d5860a6539">try_pop</a>(Data &amp;popped_value)</td><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html#a734dd1b6fdff6556bbff7de38d33cfee">wait_and_pop</a>(Data &amp;popped_value)</td><td class="entry"><a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 &copy; Copyright 2013 Velimir Mlaker.
-Generated on Fri Nov 29 2013 10:37:22 for Bites by
+Generated on Wed Dec 4 2013 12:51:15 for Bites by
 <a href="http://www.doxygen.org/index.html">Doxygen</a>
 1.8.3.1
 </small></address>

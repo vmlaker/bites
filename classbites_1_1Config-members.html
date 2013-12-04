@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,26 +82,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1Config.html">Config</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">ConcurrentQueue&lt; Data &gt; Member List</div>  </div>
+<div class="title">bites::Config Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classbites_1_1Config.html">bites::Config</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classConcurrentQueue.html#ae2ad07b611fdfc18e85ddc88cdf0f7bb">empty</a>() const </td><td class="entry"><a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classConcurrentQueue.html#a4f81ae0712063e00540f8067c75776f0">push</a>(Data const &amp;data)</td><td class="entry"><a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConcurrentQueue.html#a8cf78d267471b4501d751bc90183b077">size</a>()</td><td class="entry"><a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classConcurrentQueue.html#a2988ee8885dd78d725988d9a0bd92260">try_pop</a>(Data &amp;popped_value)</td><td class="entry"><a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConcurrentQueue.html#a96d96b06e5dad3f222d9006caeeccb71">wait_and_pop</a>(Data &amp;popped_value)</td><td class="entry"><a class="el" href="classConcurrentQueue.html">ConcurrentQueue&lt; Data &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1Config.html#a11121dd4a8496475a77b01324f7f31ae">Config</a>(const std::string &amp;fname=&quot;&quot;)</td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbites_1_1Config.html#ab6ca9f058c48d7e8abd90172449c68b5">keys</a>()</td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1Config.html#abd700a55d0aa636331c58984453262f4">load</a>(const std::string &amp;fname)</td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbites_1_1Config.html#a34fbd40ddafcf6b7f064f9dee42b7389">operator&lt;&lt;</a>(std::ostream &amp;out, const Config &amp;config)</td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbites_1_1Config.html#ac651a8f1aeab36820dcd34071f3bafdf">operator[]</a>(const std::string &amp;key)</td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbites_1_1Config.html#afcdde81a8ac22f6f413f6d306b678059">save</a>(const std::string &amp;fname) const </td><td class="entry"><a class="el" href="classbites_1_1Config.html">bites::Config</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 &copy; Copyright 2013 Velimir Mlaker.
-Generated on Fri Nov 29 2013 10:37:22 for Bites by
+Generated on Wed Dec 4 2013 12:51:15 for Bites by
 <a href="http://www.doxygen.org/index.html">Doxygen</a>
 1.8.3.1
 </small></address>

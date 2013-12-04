@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rateticker',['RateTicker',['../classRateTicker.html',1,'']]]
+  ['rateticker',['RateTicker',['../classbites_1_1RateTicker.html',1,'bites']]]
 ];

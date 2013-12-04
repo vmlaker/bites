@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Bites: ConcurrentQueue&lt; Data &gt; Class Template Reference</title>
+<title>Bites: bites::ConcurrentQueue&lt; Data &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,6 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,13 +82,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1ConcurrentQueue.html">ConcurrentQueue</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classConcurrentQueue-members.html">List of all members</a>  </div>
+<a href="classbites_1_1ConcurrentQueue-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ConcurrentQueue&lt; Data &gt; Class Template Reference</div>  </div>
+<div class="title">bites::ConcurrentQueue&lt; Data &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -95,24 +100,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f81ae0712063e00540f8067c75776f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a4f81ae0712063e00540f8067c75776f0">push</a> (Data const &amp;data)</td></tr>
-<tr class="separator:a4f81ae0712063e00540f8067c75776f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ad07b611fdfc18e85ddc88cdf0f7bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#ae2ad07b611fdfc18e85ddc88cdf0f7bb">empty</a> () const </td></tr>
-<tr class="separator:ae2ad07b611fdfc18e85ddc88cdf0f7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2988ee8885dd78d725988d9a0bd92260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a2988ee8885dd78d725988d9a0bd92260">try_pop</a> (Data &amp;popped_value)</td></tr>
-<tr class="separator:a2988ee8885dd78d725988d9a0bd92260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d96b06e5dad3f222d9006caeeccb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a96d96b06e5dad3f222d9006caeeccb71">wait_and_pop</a> (Data &amp;popped_value)</td></tr>
-<tr class="separator:a96d96b06e5dad3f222d9006caeeccb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf78d267471b4501d751bc90183b077"><td class="memItemLeft" align="right" valign="top">std::queue&lt; Data &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConcurrentQueue.html#a8cf78d267471b4501d751bc90183b077">size</a> ()</td></tr>
-<tr class="separator:a8cf78d267471b4501d751bc90183b077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f5a9718c172e64f62bb86d89191c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1ConcurrentQueue.html#ac9f5a9718c172e64f62bb86d89191c11">push</a> (Data const &amp;data)</td></tr>
+<tr class="separator:ac9f5a9718c172e64f62bb86d89191c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bfccb688bf37ccbdeffa9b9641e149"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1ConcurrentQueue.html#a25bfccb688bf37ccbdeffa9b9641e149">empty</a> () const </td></tr>
+<tr class="separator:a25bfccb688bf37ccbdeffa9b9641e149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af221d5499820894e9ef3d2d5860a6539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1ConcurrentQueue.html#af221d5499820894e9ef3d2d5860a6539">try_pop</a> (Data &amp;popped_value)</td></tr>
+<tr class="separator:af221d5499820894e9ef3d2d5860a6539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734dd1b6fdff6556bbff7de38d33cfee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1ConcurrentQueue.html#a734dd1b6fdff6556bbff7de38d33cfee">wait_and_pop</a> (Data &amp;popped_value)</td></tr>
+<tr class="separator:a734dd1b6fdff6556bbff7de38d33cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09cab5df70d45dc9b376aba2b7b7afaf"><td class="memItemLeft" align="right" valign="top">std::queue&lt; Data &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1ConcurrentQueue.html#a09cab5df70d45dc9b376aba2b7b7afaf">size</a> ()</td></tr>
+<tr class="separator:a09cab5df70d45dc9b376aba2b7b7afaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Data&gt;<br/>
-class ConcurrentQueue&lt; Data &gt;</h3>
+class bites::ConcurrentQueue&lt; Data &gt;</h3>
 
-<p>The <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a> class is a thread-safe queue. Code is adapted from original posting by Anthony Williams at <a href="http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html">http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html</a> </p>
+<p>The <a class="el" href="classbites_1_1ConcurrentQueue.html">ConcurrentQueue</a> class is a thread-safe queue. Code is adapted from original posting by Anthony Williams at <a href="http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html">http://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4f81ae0712063e00540f8067c75776f0"></a>
+<a class="anchor" id="ac9f5a9718c172e64f62bb86d89191c11"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -122,7 +127,7 @@ template&lt;typename Data &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::push </td>
+          <td class="memname">void <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue</a>&lt; Data &gt;::push </td>
           <td>(</td>
           <td class="paramtype">Data const &amp;&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
@@ -145,7 +150,7 @@ template&lt;typename Data &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae2ad07b611fdfc18e85ddc88cdf0f7bb"></a>
+<a class="anchor" id="a25bfccb688bf37ccbdeffa9b9641e149"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -155,7 +160,7 @@ template&lt;typename Data &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::empty </td>
+          <td class="memname">bool <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue</a>&lt; Data &gt;::empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -172,7 +177,7 @@ template&lt;typename Data &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2988ee8885dd78d725988d9a0bd92260"></a>
+<a class="anchor" id="af221d5499820894e9ef3d2d5860a6539"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -182,7 +187,7 @@ template&lt;typename Data &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::try_pop </td>
+          <td class="memname">bool <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue</a>&lt; Data &gt;::try_pop </td>
           <td>(</td>
           <td class="paramtype">Data &amp;&#160;</td>
           <td class="paramname"><em>popped_value</em></td><td>)</td>
@@ -205,7 +210,7 @@ template&lt;typename Data &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a96d96b06e5dad3f222d9006caeeccb71"></a>
+<a class="anchor" id="a734dd1b6fdff6556bbff7de38d33cfee"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -215,7 +220,7 @@ template&lt;typename Data &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::wait_and_pop </td>
+          <td class="memname">void <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue</a>&lt; Data &gt;::wait_and_pop </td>
           <td>(</td>
           <td class="paramtype">Data &amp;&#160;</td>
           <td class="paramname"><em>popped_value</em></td><td>)</td>
@@ -238,7 +243,7 @@ template&lt;typename Data &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8cf78d267471b4501d751bc90183b077"></a>
+<a class="anchor" id="a09cab5df70d45dc9b376aba2b7b7afaf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -248,7 +253,7 @@ template&lt;typename Data &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::queue&lt;Data&gt;::size_type <a class="el" href="classConcurrentQueue.html">ConcurrentQueue</a>&lt; Data &gt;::size </td>
+          <td class="memname">std::queue&lt;Data&gt;::size_type <a class="el" href="classbites_1_1ConcurrentQueue.html">bites::ConcurrentQueue</a>&lt; Data &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -273,7 +278,7 @@ template&lt;typename Data &gt; </div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 &copy; Copyright 2013 Velimir Mlaker.
-Generated on Fri Nov 29 2013 10:37:22 for Bites by
+Generated on Wed Dec 4 2013 12:51:15 for Bites by
 <a href="http://www.doxygen.org/index.html">Doxygen</a>
 1.8.3.1
 </small></address>

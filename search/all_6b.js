@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keys',['keys',['../classConfig.html#a843df81617f6df4683235af7da1810d2',1,'Config']]]
+  ['keys',['keys',['../classbites_1_1Config.html#ab6ca9f058c48d7e8abd90172449c68b5',1,'bites::Config']]]
 ];

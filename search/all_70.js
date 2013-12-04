@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['push',['push',['../classConcurrentQueue.html#a4f81ae0712063e00540f8067c75776f0',1,'ConcurrentQueue']]]
+  ['push',['push',['../classbites_1_1ConcurrentQueue.html#ac9f5a9718c172e64f62bb86d89191c11',1,'bites::ConcurrentQueue']]]
 ];
