@@ -5,12 +5,12 @@
 
 namespace bites {
 
-/*!
+/**
   Allows creating thread "objects"
   similarly to Python's Thread (or Process) class.
   For example, in Python you'd create your class this way:
 
-  \code
+  @code
 
   from threading import Thread
 
@@ -24,34 +24,33 @@ namespace bites {
   bar.start()
   bar.join()
 
-  \endcode
+  @endcode
 
   Using Thread class, the analogous C++ definition is:
 
-  \code
+  @code
 
   #include <iostream>
-  #include "Thread.hpp"
+  #include <bites.hpp>
 
-  class Foo : public Thread {
+  class Foo : public bites::Thread {
   private:
      void run() { std::cout << "Hello!" << std::endl; }
   };
 
-  int main(int argc, char** argv) {
+  int main (int argc, char** argv) {
      bar Foo;
      bar.start();
      bar.join();
   }
 
-  \endcode
-
+  @endcode
  */
 class Thread {
 
 public:
-    /*!
-      Deallocate memory for internal thread object.
+    /**
+       Deallocate memory for internal thread object.
      */
     ~Thread()
     {
@@ -61,15 +60,15 @@ public:
         }
     }
 
-    /*!
-      Allocate (and start) internal thread object.
+    /**
+       Allocate (and start) internal thread object.
     */
     void start ()
     {
         m_thread = new std::thread(&Thread::run, this);
     }
 
-    /*!
+    /**
       Join internal thread.
     */
     void join ()
@@ -83,8 +82,8 @@ public:
 private:
     std::thread* m_thread = NULL;
 
-    /*!
-      Implement this in subclass.
+    /**
+       Implement this in subclass.
     */
     virtual void run() = 0;
 };

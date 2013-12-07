@@ -1,6 +1,6 @@
 /**
 
-\mainpage Getting started
+@mainpage Getting started
 
 Bites is a small library of standalone C++ codes
 <a href="http://www.github.com/vmlaker">the author</a>
@@ -12,6 +12,9 @@ and often relies on
 for implementation details.
 The project is hosted on
 <a href="http://www.github.com/vmlaker/bites">GitHub</a>.
+
+Version ###version### is the latest version of the codes,
+updated on ###updated###.
 
 Installation
 ------------
@@ -26,25 +29,25 @@ These software requirements are freely available and best gotten
 using your distribution's package manager.
 If using YUM, get them with:
 
-\code
+@code
    yum install boost-devel scons
-\endcode
+@endcode
 
 Or with Aptitude, ala:
 
-\code
+@code
    aptitude install libboost-all-dev scons
-\endcode
+@endcode
 
 Now you're ready to download, build and test Bites on your system:
 
-\code  
+@code  
    git clone http://github.com/vmlaker/bites
    cd bites
    scons -j8
    bin/run_tests --report_level=short
    bin/run_tests --report_level=detailed
-\endcode
+@endcode
 
 Generating docs
 ---------------
@@ -53,9 +56,8 @@ Source code is annotated with comments written in
 If you'd like to generate your own docs
 (like the web pages you are now reading) try this:
 
-\code
-   scons logo_small.png
-   doxygen dox/doxy.conf
-\endcode
+@code
+   sh dox/build-dox.sh
+@endcode
 
 */
