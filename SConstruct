@@ -31,6 +31,18 @@ names += [
     'Thread',
 ]
 
+# Build auxiliary executable.
+env = Environment(
+    CPPPATH='include',
+    LIBS=['boost_thread'],
+    CXXFLAGS='-std=c++11',
+) 
+progs = env.Program(
+    target=os.path.join('bin', 'dump_version'),
+    source=os.path.join('test', 'dump_version.cpp'),
+)
+Default(progs)  # Part of the default build.
+
 # Build the test program.
 libs = [
     'boost_unit_test_framework', 
