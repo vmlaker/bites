@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Bites: bites::Averager Class Reference</title>
+<title>Bites: bites::Thread Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,86 +84,132 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1Averager.html">Averager</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1Thread.html">Thread</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classbites_1_1Averager-members.html">List of all members</a>  </div>
+<a href="classbites_1_1Thread-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">bites::Averager Class Reference</div>  </div>
+<div class="title">bites::Thread Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="Averager_8hpp_source.html">Averager.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a57bdc9055f08f4da8363153587689a10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#a57bdc9055f08f4da8363153587689a10">Averager</a> (const int &amp;max_count)</td></tr>
-<tr class="separator:a57bdc9055f08f4da8363153587689a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4279a5eb3e44bc65a93009b8efb6f64f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#a4279a5eb3e44bc65a93009b8efb6f64f">add</a> (const float &amp;value)</td></tr>
-<tr class="separator:a4279a5eb3e44bc65a93009b8efb6f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c343dd0c86915637df62f8b51096ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#ad4c343dd0c86915637df62f8b51096ce">length</a> ()</td></tr>
-<tr class="separator:ad4c343dd0c86915637df62f8b51096ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b72221bd10d841dd2a9c0d29892992a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Thread.html#a7b72221bd10d841dd2a9c0d29892992a">~Thread</a> ()</td></tr>
+<tr class="separator:a7b72221bd10d841dd2a9c0d29892992a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb33612a0825bca1d54e2d146810575"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Thread.html#adbb33612a0825bca1d54e2d146810575">start</a> ()</td></tr>
+<tr class="separator:adbb33612a0825bca1d54e2d146810575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d8a2257abcd594059ae3006bf3edb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Thread.html#a74d8a2257abcd594059ae3006bf3edb3">join</a> ()</td></tr>
+<tr class="separator:a74d8a2257abcd594059ae3006bf3edb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Keeps a running average with limited history. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a57bdc9055f08f4da8363153587689a10"></a>
+<div class="textblock"><p>Allows creating thread "objects" similarly to Python's <a class="el" href="classbites_1_1Thread.html">Thread</a> (or Process) class. For example, in Python you'd create your class this way:</p>
+<div class="fragment"><div class="line">from threading <span class="keyword">import</span> Thread</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span>Foo(Thread):</div>
+<div class="line">   def __init__(self):</div>
+<div class="line">      super(Foo, self).__init__()</div>
+<div class="line">   def run(self):</div>
+<div class="line">      print(&#39;Hello!&#39;)</div>
+<div class="line"></div>
+<div class="line">bar = Foo()</div>
+<div class="line">bar.<a class="code" href="classbites_1_1Thread.html#adbb33612a0825bca1d54e2d146810575">start</a>()</div>
+<div class="line">bar.<a class="code" href="classbites_1_1Thread.html#a74d8a2257abcd594059ae3006bf3edb3">join</a>()</div>
+</div><!-- fragment --><p>Using <a class="el" href="classbites_1_1Thread.html">Thread</a> class, the analogous C++ definition is:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;bites.hpp&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span>Foo : <span class="keyword">public</span> <a class="code" href="classbites_1_1Thread.html">bites::Thread</a> {</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">   <span class="keywordtype">void</span> run() { std::cout &lt;&lt; <span class="stringliteral">&quot;Hello!&quot;</span> &lt;&lt; std::endl; }</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line">   bar Foo;</div>
+<div class="line">   bar.<a class="code" href="classbites_1_1Thread.html#adbb33612a0825bca1d54e2d146810575">start</a>();</div>
+<div class="line">   bar.join();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7b72221bd10d841dd2a9c0d29892992a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bites::Averager::Averager </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>max_count</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The constructor initializes the averager with maximum number of (latest) samples to keep. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4279a5eb3e44bc65a93009b8efb6f64f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float bites::Averager::add </td>
-          <td>(</td>
-          <td class="paramtype">const float &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Add a value, and return current average. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad4c343dd0c86915637df62f8b51096ce"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int bites::Averager::length </td>
+          <td class="memname">bites::Thread::~Thread </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Return number of samples. </p>
+<p>Deallocate memory for internal thread object. </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="Averager_8hpp_source.html">Averager.hpp</a></li>
-<li>src/Averager.cpp</li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="adbb33612a0825bca1d54e2d146810575"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bites::Thread::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocate (and start) internal thread object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74d8a2257abcd594059ae3006bf3edb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bites::Thread::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Join internal thread. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/<a class="el" href="Thread_8hpp_source.html">Thread.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
