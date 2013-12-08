@@ -3,13 +3,14 @@
 
 namespace bites {
 
-static const char* VERSION = "1.0.0";
+static const char* VERSION = "1.0.1";
 
 }
 
 #include "Averager.hpp"
 #include "Config.hpp"
 #include "ConcurrentQueue.hpp"
+#include "Mutexed.hpp"
 #include "RateTicker.hpp"
 #include "SortedList.hpp"
 #include "Thread.hpp"
