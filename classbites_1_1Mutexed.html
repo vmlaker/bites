@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Bites: bites::Averager Class Reference</title>
+<title>Bites: bites::Mutexed&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,86 +84,146 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1Averager.html">Averager</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacebites.html">bites</a></li><li class="navelem"><a class="el" href="classbites_1_1Mutexed.html">Mutexed</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classbites_1_1Averager-members.html">List of all members</a>  </div>
+<a href="classbites_1_1Mutexed-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">bites::Averager Class Reference</div>  </div>
+<div class="title">bites::Mutexed&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="Averager_8hpp_source.html">Averager.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Mutexed_8hpp_source.html">Mutexed.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a57bdc9055f08f4da8363153587689a10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#a57bdc9055f08f4da8363153587689a10">Averager</a> (const int &amp;max_count)</td></tr>
-<tr class="separator:a57bdc9055f08f4da8363153587689a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4279a5eb3e44bc65a93009b8efb6f64f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#a4279a5eb3e44bc65a93009b8efb6f64f">add</a> (const float &amp;value)</td></tr>
-<tr class="separator:a4279a5eb3e44bc65a93009b8efb6f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c343dd0c86915637df62f8b51096ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Averager.html#ad4c343dd0c86915637df62f8b51096ce">length</a> ()</td></tr>
-<tr class="separator:ad4c343dd0c86915637df62f8b51096ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae3e36bde8fd13f9becbd2a16870284"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Mutexed.html#a5ae3e36bde8fd13f9becbd2a16870284">Mutexed</a> ()</td></tr>
+<tr class="separator:a5ae3e36bde8fd13f9becbd2a16870284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aec99968d2fc3cd5a5f9cf9e9d35465"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Mutexed.html#a2aec99968d2fc3cd5a5f9cf9e9d35465">Mutexed</a> (const T &amp;value)</td></tr>
+<tr class="separator:a2aec99968d2fc3cd5a5f9cf9e9d35465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b2dd788c996c72905a8ba23804d282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Mutexed.html#a92b2dd788c996c72905a8ba23804d282">set</a> (const T &amp;value)</td></tr>
+<tr class="separator:a92b2dd788c996c72905a8ba23804d282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f9c3ea723ab46ac1cf9abfca1e29a3"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbites_1_1Mutexed.html#ad5f9c3ea723ab46ac1cf9abfca1e29a3">get</a> ()</td></tr>
+<tr class="separator:ad5f9c3ea723ab46ac1cf9abfca1e29a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Keeps a running average with limited history. </p>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class bites::Mutexed&lt; T &gt;</h3>
+
+<p>Wrapper around a mutex-protected object. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a57bdc9055f08f4da8363153587689a10"></a>
+<a class="anchor" id="a5ae3e36bde8fd13f9becbd2a16870284"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bites::Averager::Averager </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>max_count</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The constructor initializes the averager with maximum number of (latest) samples to keep. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4279a5eb3e44bc65a93009b8efb6f64f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float bites::Averager::add </td>
-          <td>(</td>
-          <td class="paramtype">const float &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Add a value, and return current average. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad4c343dd0c86915637df62f8b51096ce"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int bites::Averager::length </td>
+          <td class="memname"><a class="el" href="classbites_1_1Mutexed.html">bites::Mutexed</a>&lt; T &gt;::<a class="el" href="classbites_1_1Mutexed.html">Mutexed</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Return number of samples. </p>
+<p>Default constructor. </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="Averager_8hpp_source.html">Averager.hpp</a></li>
-<li>src/Averager.cpp</li>
+<a class="anchor" id="a2aec99968d2fc3cd5a5f9cf9e9d35465"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbites_1_1Mutexed.html">bites::Mutexed</a>&lt; T &gt;::<a class="el" href="classbites_1_1Mutexed.html">Mutexed</a> </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct and set the mutexed object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a92b2dd788c996c72905a8ba23804d282"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classbites_1_1Mutexed.html">bites::Mutexed</a>&lt; T &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the object. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad5f9c3ea723ab46ac1cf9abfca1e29a3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classbites_1_1Mutexed.html">bites::Mutexed</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve (a copy of) the object by value. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/<a class="el" href="Mutexed_8hpp_source.html">Mutexed.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
