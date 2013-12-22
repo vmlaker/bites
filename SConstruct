@@ -10,6 +10,7 @@ names = [
     'Averager',
     'Config',
     'RateTicker',
+    'String',
 ]
 
 # Build the library.
@@ -46,6 +47,7 @@ Default(progs)  # Part of the default build.
 
 # Build the test program.
 libs = [
+    'boost_filesystem',
     'boost_unit_test_framework', 
     'boost_thread', 
     'bites',

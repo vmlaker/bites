@@ -3,7 +3,7 @@
 
 namespace bites {
 
-static const char* VERSION = "1.0.1";
+static const char* VERSION = "1.0.2";
 
 }
 
@@ -13,6 +13,7 @@ static const char* VERSION = "1.0.1";
 #include "Mutexed.hpp"
 #include "RateTicker.hpp"
 #include "SortedList.hpp"
+#include "String.hpp"
 #include "Thread.hpp"
 
 #endif  //__BITES_HPP__
