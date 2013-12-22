@@ -110,12 +110,52 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a238978ad585e47705e78c8ccccfae881"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebites.html#a238978ad585e47705e78c8ccccfae881">time2levels</a> (const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;)</td></tr>
+<tr class="separator:a238978ad585e47705e78c8ccccfae881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69b4f4ec1bf073b7403e57adf6095a0"><td class="memItemLeft" align="right" valign="top">boost::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebites.html#aa69b4f4ec1bf073b7403e57adf6095a0">time2dir</a> (const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;)</td></tr>
+<tr class="separator:aa69b4f4ec1bf073b7403e57adf6095a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a106115e5c721d69429e9946e7f57d6a4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebites.html#a106115e5c721d69429e9946e7f57d6a4">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classbites_1_1Config.html">Config</a> &amp;config)</td></tr>
 <tr class="separator:a106115e5c721d69429e9946e7f57d6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classbites_1_1Averager.html">Averager</a> class implementation. </p>
+<div class="textblock"><p>Various "string" related functions. Conversions from Date/Time to filesystem paths.</p>
+<p><a class="el" href="classbites_1_1Averager.html">Averager</a> class implementation. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a238978ad585e47705e78c8ccccfae881"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; bites::time2levels </td>
+          <td>(</td>
+          <td class="paramtype">const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;&#160;</td>
+          <td class="paramname"><em>given_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Given the time point, return a vector of directory levels (as strings).</p>
+<p>For example, given "2013-09-08 13:01:44", return {'2013', '09', '08', '13', '01'}. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa69b4f4ec1bf073b7403e57adf6095a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::filesystem::path bites::time2dir </td>
+          <td>(</td>
+          <td class="paramtype">const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;&#160;</td>
+          <td class="paramname"><em>given_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Given the time point, return a filesystem path assembled from <a class="el" href="namespacebites.html#a238978ad585e47705e78c8ccccfae881">time2levels()</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a106115e5c721d69429e9946e7f57d6a4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +195,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 &copy; Copyright 2013 Velimir Mlaker.
-Generated on Sun Dec 8 2013 09:23:53 for Bites by
+Generated on Sun Dec 22 2013 12:19:04 for Bites by
 <a href="http://www.doxygen.org/index.html">Doxygen</a>
 1.8.3.1
 </small></address>
