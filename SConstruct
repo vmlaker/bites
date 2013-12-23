@@ -36,7 +36,10 @@ names += [
 # Build auxiliary executable.
 env = Environment(
     CPPPATH='include',
-    LIBS=['boost_thread'],
+    LIBS=[
+        'boost_system',
+        'boost_thread'
+        ],
     CXXFLAGS='-std=c++11',
 ) 
 progs = env.Program(
@@ -48,8 +51,9 @@ Default(progs)  # Part of the default build.
 # Build the test program.
 libs = [
     'boost_filesystem',
-    'boost_unit_test_framework', 
+    'boost_system',
     'boost_thread', 
+    'boost_unit_test_framework', 
     'bites',
 ]
 sources = ['test.cpp'] + ['{}Test.cpp'.format(name) for name in names]
