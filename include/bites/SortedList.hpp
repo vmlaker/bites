@@ -1,5 +1,5 @@
-#ifndef __SORTEDLIST_HPP__
-#define __SORTEDLIST_HPP__
+#ifndef BITES_SORTEDLIST_HPP_INCLUDED
+#define BITES_SORTEDLIST_HPP_INCLUDED
 
 #include <list>
 
@@ -67,4 +67,4 @@ private:
 
 }  // namespace bites.
 
-#endif //__SORTEDLIST_HPP__
+#endif  // BITES_SORTEDLIST_HPP_INCLUDED

@@ -1,7 +1,11 @@
+/**
+   String utilities.
+*/
+
 #include <sstream>
 #include <string>
 #include <vector>
-#include "String.hpp"
+#include "bites.hpp"
 
 namespace bites {
 

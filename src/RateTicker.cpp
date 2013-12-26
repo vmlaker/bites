@@ -1,7 +1,9 @@
-// Rate ticker.
+/**
+   RateTicker class implementation.
+*/
 
 #include <boost/date_time.hpp>
-#include "RateTicker.hpp"
+#include "bites.hpp"
 
 namespace bites {
 

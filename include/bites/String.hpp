@@ -1,5 +1,5 @@
-#ifndef __STRING_HPP__
-#define __STRING_HPP__
+#ifndef BITES_STRING_HPP_INCLUDED
+#define BITES_STRING_HPP_INCLUDED
 
 #include <chrono>  
 #include <string>
@@ -32,4 +32,4 @@ boost::filesystem::path time2dir(
 
 }  // namespace bites.
 
-#endif //__STRING_HPP__
+#endif  // BITES_STRING_HPP_INCLUDED

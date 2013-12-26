@@ -1,5 +1,5 @@
-#ifndef __RATETICKER_HPP__
-#define __RATETICKER_HPP__
+#ifndef BITES_RATETICKER_HPP_INCLUDED
+#define BITES_RATETICKER_HPP_INCLUDED
 
 #include <vector>
 #include <boost/date_time.hpp>
@@ -34,4 +34,4 @@ private:
 
 }  // namespace bites.
 
-#endif //__RATETICKER_HPP__
+#endif  // BITES_RATETICKER_HPP_INCLUDED

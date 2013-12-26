@@ -1,5 +1,5 @@
-#ifndef __CONFIG_HPP__
-#define __CONFIG_HPP__
+#ifndef BITES_CONFIG_HPP_INCLUDED
+#define BITES_CONFIG_HPP_INCLUDED
 
 #include <string>
 #include <vector>
@@ -79,4 +79,4 @@ private:
 
 }  // namespace bites.
 
-#endif //__CONFIG_HPP__
+#endif  // BITES_CONFIG_HPP_INCLUDED

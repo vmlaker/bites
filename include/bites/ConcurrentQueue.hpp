@@ -1,5 +1,5 @@
-#ifndef __CONCURRENTQUEUE_HPP__
-#define __CONCURRENTQUEUE_HPP__
+#ifndef BITES_CONCURRENTQUEUE_HPP_INCLUDED
+#define BITES_CONCURRENTQUEUE_HPP_INCLUDED
 
 #include <queue>
 #include <boost/thread/mutex.hpp>
@@ -79,4 +79,4 @@ public:
 
 }  // namespace bites.
 
-#endif //__CONCURRENTQUEUE_HPP__
+#endif  // BITES_CONCURRENTQUEUE_HPP_INCLUDED

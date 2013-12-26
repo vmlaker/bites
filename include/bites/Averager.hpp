@@ -1,5 +1,5 @@
-#ifndef __AVERAGER_HPP__
-#define __AVERAGER_HPP__
+#ifndef BITES_AVERAGER_HPP_INCLUDED
+#define BITES_AVERAGER_HPP_INCLUDED
 
 #include <deque>
 
@@ -34,4 +34,4 @@ private:
 
 }  // namespace bites.
 
-#endif //__AVERAGER_HPP__
+#endif  // BITES_AVERAGER_HPP_INCLUDED

@@ -1,5 +1,5 @@
-#ifndef __MUTEXED_HPP__
-#define __MUTEXED_HPP__
+#ifndef BITES_MUTEXED_HPP_INCLUDED
+#define BITES_MUTEXED_HPP_INCLUDED
 
 #include <mutex>
 #include <bites.hpp>
@@ -51,4 +51,4 @@ private:
 
 }  // namespace bites.
 
-#endif  // __MUTEXED_HPP__
+#endif  // BITES_MUTEXED_HPP_INCLUDED

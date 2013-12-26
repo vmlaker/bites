@@ -1,19 +1,19 @@
-#ifndef __BITES_HPP__
-#define __BITES_HPP__
+#ifndef BITES_HPP_INCLUDED
+#define BITES_HPP_INCLUDED
 
 namespace bites {
 
-static const char* VERSION = "1.0.2";
+static const char* VERSION = "1.0.3";
 
 }
 
-#include "Averager.hpp"
-#include "Config.hpp"
-#include "ConcurrentQueue.hpp"
-#include "Mutexed.hpp"
-#include "RateTicker.hpp"
-#include "SortedList.hpp"
-#include "String.hpp"
-#include "Thread.hpp"
+#include "bites/Averager.hpp"
+#include "bites/Config.hpp"
+#include "bites/ConcurrentQueue.hpp"
+#include "bites/Mutexed.hpp"
+#include "bites/RateTicker.hpp"
+#include "bites/SortedList.hpp"
+#include "bites/String.hpp"
+#include "bites/Thread.hpp"
 
-#endif  //__BITES_HPP__
+#endif  // BITES_HPP_INCLUDED

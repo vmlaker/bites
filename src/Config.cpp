@@ -1,10 +1,17 @@
-// Config.
+/**
+   Config class implementation.
+*/
 
+// Include standard headers. 
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
+// Include 3rd-party headers.
 #include <boost/algorithm/string.hpp>
-#include "Config.hpp"
+
+// Include application headers.
+#include "bites.hpp"
 
 namespace bites {
 

@@ -1,5 +1,5 @@
-#ifndef __THREAD_HPP__
-#define __THREAD_HPP__
+#ifndef BITES_THREAD_HPP_INCLUDED
+#define BITES_THREAD_HPP_INCLUDED
 
 #include <thread>
 
@@ -90,4 +90,4 @@ private:
 
 }  // namespace sherlock.
 
-#endif  // __THREAD_HPP__
+#endif  // BITES_THREAD_HPP_INCLUDED
