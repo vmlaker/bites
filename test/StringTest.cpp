@@ -43,4 +43,21 @@ BOOST_AUTO_TEST_CASE(test2)
     BOOST_CHECK_EQUAL (false, boost::filesystem::exists (result));
 }
 
+/**
+   Test time2string() function.
+*/
+BOOST_AUTO_TEST_CASE(test3)
+{
+    auto now = std::chrono::system_clock::now();
+    BOOST_CHECK_EQUAL (bites::time2string (now, "%C").size(),    2);  // 00-99
+    BOOST_CHECK_EQUAL (bites::time2string (now, "%D").size(),    8);  // MM/DD/YY
+    BOOST_CHECK_EQUAL (bites::time2string (now, "%F").size(),   10);  // YYYY-MM-DD
+    BOOST_CHECK_EQUAL (bites::time2string (now, "_%C_%D_%F_").size(), 4+2+8+10);  // delimited
+    BOOST_CHECK_EQUAL (bites::time2string (now, "%f%f").size(), 12);  // microseconds twice
+    BOOST_CHECK_EQUAL (
+        bites::time2string (now, "%Y-%m-%d %H:%M:%S.%f").size(),
+        std::string("YYYY-MM-DD HH:MM:SS.mmmmmm").size());
+    
+}
+
 BOOST_AUTO_TEST_SUITE_END()

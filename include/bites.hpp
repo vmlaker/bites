@@ -3,7 +3,7 @@
 
 namespace bites {
 
-static const char* VERSION = "1.0.3";
+static const char* VERSION = "1.0.4";
 
 }
 

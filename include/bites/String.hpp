@@ -14,6 +14,15 @@
 namespace bites {
 
 /**
+   Given the time point and format string, 
+   return a formatted string.
+   Supports the %f conversion specifier for microseconds.
+*/   
+std::string time2string(
+    const std::chrono::time_point<std::chrono::high_resolution_clock>& given_time,
+    const std::string& format);
+
+/**
    Given the time point, 
    return a vector of directory levels (as strings).
    
