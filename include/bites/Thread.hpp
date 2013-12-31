@@ -88,6 +88,6 @@ private:
     virtual void run() = 0;
 };
 
-}  // namespace sherlock.
+}  // namespace bites.
 
 #endif  // BITES_THREAD_HPP_INCLUDED
