@@ -29,6 +29,7 @@ Default(lib)  # Library is part of the default build.
 names += [
     'ConcurrentQueue',
     'Mutexed',
+    'MutexedCounter',
     'SortedList',
     'Thread',
 ]
