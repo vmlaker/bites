@@ -60,4 +60,7 @@ If you'd like to generate your own docs
    sh dox/build-dox.sh
 @endcode
 
+To update GitHub's gh-pages branch (i.e. build, commit and push the repo)
+carefully execute file `dox/build-gh-pages.sh` line-by-line.
+
 */

@@ -13,6 +13,10 @@ mv html/* .
 rm -rf html
 git add .
 
+# Sanity check, see errors or recommendations,
+# may have to do "git add . --all" afterwards.
+git status
+
 git commit -m "Update gh-pages for `git log master -1 | head -1`"
 git push
 git checkout master
