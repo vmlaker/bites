@@ -85,4 +85,14 @@ BOOST_AUTO_TEST_CASE(test5)
     BOOST_CHECK_EQUAL(cc["key7"], "val71 val72");
 }
 
+// Return value of load().
+BOOST_AUTO_TEST_CASE(test6)
+{
+    bites::Config cc;
+    auto result = cc.load("test/simple3.cfg");
+    BOOST_CHECK_EQUAL(result, true);
+    result = cc.load("some/non-existant/file");
+    BOOST_CHECK_EQUAL(result, false);
+}
+
 BOOST_AUTO_TEST_SUITE_END()

@@ -23,10 +23,16 @@ Config::Config(const std::string& fname)
     }
 }
 
-void Config::load(const std::string& fname)
+bool Config::load(const std::string& fname)
 {
-    // Iterate through lines in the file.
+    // Open the given file.
     std::ifstream infile(fname.c_str());
+    if (not infile.good()){
+        infile.close();
+        return false;
+    }
+
+    // Iterate through lines in the file.
     std::string line;
     int count = 0;  // Keep a running count of lines.
     while(getline(infile, line)){
@@ -75,6 +81,7 @@ void Config::load(const std::string& fname)
         m_data[key] = value;  // Add to internal container.
     }
     infile.close();
+    return true;
 }
 
 void Config::save(const std::string& fname) const

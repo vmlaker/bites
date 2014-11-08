@@ -51,7 +51,8 @@ public:
 
     //!  Load config contents from file.
     //!  \param fname name of input file.
-    void load(const std::string& fname);
+    //!  \returns true if success, otherwise false.
+    bool load(const std::string& fname);
 
     //!  Save config contents to file.
     //!  \param fname name of output file.
