@@ -27,6 +27,7 @@ Default(lib)  # Library is part of the default build.
 
 # Add header-only classes.
 names += [
+    'ConcurrentCounter',
     'ConcurrentQueue',
     'Mutexed',
     'MutexedCounter',

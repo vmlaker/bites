@@ -9,6 +9,7 @@ static const char* VERSION = "1.0.6";
 
 #include "bites/Averager.hpp"
 #include "bites/Config.hpp"
+#include "bites/ConcurrentCounter.hpp"
 #include "bites/ConcurrentQueue.hpp"
 #include "bites/Mutexed.hpp"
 #include "bites/MutexedCounter.hpp"
