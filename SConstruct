@@ -57,6 +57,7 @@ libs = [
     'boost_thread', 
     'boost_unit_test_framework', 
     'bites',
+    'pthread',
 ]
 sources = ['test.cpp'] + ['{}Test.cpp'.format(name) for name in names]
 sources = [os.path.join('test', source) for source in sources]
