@@ -1,6 +1,7 @@
 // Test of ConcurrentCounter class.
 
 #include <chrono>
+#include <random>
 #include <boost/test/unit_test.hpp>
 #include "bites.hpp"
 
