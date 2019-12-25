@@ -18,7 +18,7 @@ public:
       For example, use (60, 300, 900) to track rates at 1, 5 and 15 minute 
       periods (like when reporting system load.)
     */
-    RateTicker(const std::vector<float>& periods);
+    RateTicker(const std::vector<int>& periods);
 
     /*!
       Tick the ticker. 
@@ -28,7 +28,7 @@ public:
     */
     std::vector<float> tick();
 private:
-    std::vector<float> m_periods;
+    std::vector<int> m_periods;
     SortedList<boost::posix_time::ptime> m_history;
 };
 

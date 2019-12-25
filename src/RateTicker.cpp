@@ -10,7 +10,7 @@ namespace bites {
 // Initialize the object with a vector of time periods in seconds.
 // For example, use (60, 300, 900) to track rates at 1, 5 and 15 minute
 // periods (like when reporting system load.)
-RateTicker::RateTicker(const std::vector<float>& periods)
+RateTicker::RateTicker(const std::vector<int>& periods)
     : m_periods(periods),
       m_history()
 {
